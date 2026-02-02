@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reiseplanung Marokko</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        
+        :root {
+            --bg-color: #F2E8CF; /* Etwas hellerer, weicherer Sandton */
+            --card-bg: #FFFFFF;
+            --accent-terracotta: #BC4749; /* Weicheres Rot/Terracotta */
+            --accent-teal: #386641; /* Natürlicheres Grün */
+            --accent-blue: #6A994E; /* Akzentfarbe für Buttons */
+            --black: #1A1A1A;
+            --border-width: 3px; /* Dünnere Linien für weniger "In-your-face" */
+            --shadow-offset: 6px; /* Kleinerer Schatten-Versatz */
+        }
+
+        body {
+            background-color: var(--bg-color);
+            font-family: "Work Sans", sans-serif;
+              margin: 0;
+            padding: 20px;
+            color: var(--black);
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: var(--accent-terracotta);
+            border: var(--border-width) solid var(--black);
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow-offset) var(--shadow-offset) 0px 0px var(--black);
+        }
+
+        h1 {
+            font-size: clamp(1.8rem, 6vw, 3.5rem);
+            margin: 0;
+            text-transform: uppercase;
+            color: white;
+            letter-spacing: -1px;
+        }
+
+        .disclaimer {
+            background: #fdf0d5;
+            border: var(--border-width) solid var(--black);
+            padding: 1.2rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 4px 4px 0px 0px var(--black);
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        h2 {
+            font-family: 'Arial Black', sans-serif;
+            text-transform: uppercase;
+            font-size: 1.4rem;
+            margin-top: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: var(--border-width) solid var(--black);
+            margin-bottom: 3rem;
+            box-shadow: var(--shadow-offset) var(--shadow-offset) 0px 0px var(--black);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-content {
+            padding: 1.5rem 2rem;
+        }
+
+        .card-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-bottom: var(--border-width) solid var(--black);
+            object-fit: cover;
+            max-height: 500px;
+        }
+
+        .date-badge {
+            display: inline-block;
+            background: var(--accent-teal);
+            color: white;
+            border: 2px solid var(--black);
+            padding: 0.4rem 1rem;
+            font-weight: 800;
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--accent-blue);
+            color: white;
+            border: var(--border-width) solid var(--black);
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            margin-top: 10px;
+            margin-right: 10px;
+            box-shadow: 3px 3px 0px 0px var(--black);
+            transition: transform 0.1s, box-shadow 0.1s;
+        }
+
+        .btn:hover {
+            transform: translate(-1px, -1px);
+            box-shadow: 4px 4px 0px 0px var(--black);
+        }
+
+        .btn:active {
+            transform: translate(2px, 2px);
+            box-shadow: 0px 0px 0px 0px var(--black);
+        }
+
+        .map-container {
+            border-top: var(--border-width) solid var(--black);
+            height: 400px;
+            width: 100%;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .streetview-container {
+            margin-top: 1rem;
+            border: var(--border-width) solid var(--black);
+            height: 300px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .grid { grid-template-columns: 1fr; }
+            .map-container { height: 300px; }
+            h1 { font-size: 1.8rem; }
+        }
+
+        strong { color: var(--accent-terracotta); }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>MAROKKO TRIP</h1>
+                <link rel="icon" type="image/png" href="Multipla.png">
+
+        <p style="font-weight: bold; color: white; margin-bottom: 1.5rem; opacity: 0.9;">AGADIR / SIDI IFNI / TAROUDANT / MARRAKESCH</p>
+        <a href="https://www.google.com/travel/flights/search?tfs=CBwQAhojEgoyMDI2LTAyLTE5agwIAhIIL20vMDE1NnFyBwgBEgNBR0EaIxIKMjAyNi0wMi0yOGoHCAESA0FHQXIMCAISCC9tLzAxNTZxQAFIAXABggELCP___________wGYAQE&tfu=EgYIABAAGAA" target="_blank" class="btn" style="background: white; color: black;">Flüge prüfen</a>
+    </header>
+
+    <!-- DISCLAIMER -->
+    <div class="disclaimer">
+        <span style="font-size: 1.5rem;"><strong>FIY</strong></span>
+        </span>
+        <p style="margin: 0;"> Bis auf das Airbnb in Marrakesch, die Flüge aus Berlin und das Auto ist bereits alles gebucht. Alle Reservierungen sind jedoch <strong>kostenlos stornierbar</strong>, falls wir spontan etwas anderes machen wollen.</p>
+    </div>
+
+    <!-- TAG 1 -->
+    <div class="card">
+        <div class="card-content">
+            <div class="date-badge">19.02.2026</div>
+            <h2>Berlin nach Agadir</h2>
+            <p>Ankunft gegen 23:00 Uhr. Transfer per <strong>In Drive</strong> Taxi nach Agadir Stadt. Erste Nacht im Hotel (ca. 40 Euro).</p> 
+            <p>Nemo und Stascha kommen am 20.02. Da es keine guten Flugverbindungen aus BER am 20. gibt, ist der 19. für Lena, Nico und Mira vielleicht sinnvoller</p>
+            <p>PS: schaut mal nach verbindungen aus Hamburg, ich hab dort nichts gutes irgendwo nach Marokko gesehen</p>
+        </div>
+    </div>
+
+    <!-- TAG 2 -->
+    <div class="card">
+        <img src="Bilder/HausInSidiIfni.png" alt="Sidi Ifni" class="card-img">
+        <div class="card-content">
+            <div class="date-badge">20.02.2026</div>
+            <h2>Mietwagen & Sidi Ifni</h2>
+            <p>07:45 Uhr: Stascha & Nemo landen. Abholung des Autos am Flughafen und Fahrt nach <strong>Sidi Ifni</strong>.</p>
+            <a href="https://maps.app.goo.gl/VC7ji22c6h7Rhdk77" target="_blank" class="btn">Route öffnen</a>
+            <a href="https://www.airbnb.de/rooms/1321119832139815635" target="_blank" class="btn" style="background: var(--accent-terracotta);">Airbnb Sidi Ifni</a>
+        </div>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d441165!2d-9.9!3d29.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0xdb3b6f0!2sAgadir%20Al-Massira%20Airport!3m2!1d30.32!2d-9.41!4m5!1s0xdb4eb59!2sSidi%20Ifni!3m2!1d29.37!2d-10.17!5e0!3m2!1sde!2sde!4v123456789" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <!-- TAG 5 -->
+    <div class="card">
+        <img src="Bilder/Taroudant.png" alt="Taroudant" class="card-img">
+        <div class="card-content">
+            <div class="date-badge">23.02.2026</div>
+            <h2>Etappe nach Taroudant</h2>
+            <p>Aufbruch ins Landesinnere zur historischen Mauernstadt Taroudant.</p>
+            <a href="https://www.booking.com/searchresults.html?ss=Taroudant&checkin=2026-02-19&checkout=2026-02-20&group_adults=3" target="_blank" class="btn">Unterkunft ansehen</a>
+        </div>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d885256.4363037923!2d-10.184128692845075!3d29.920953452238237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0xdb4eb597d2875e9%3A0x4e6390fbcdb70ae5!2sSidi%20Ifni%2C%20Marokko!3m2!1d29.37!2d-10.17!4m5!1s0xdb17309901e7a19%3A0x9b0fdf4f4b50237a!2sTaroudant%2C%20Marokko!3m2!1d30.47!2d-8.87!5e0!3m2!1sde!2sde!4v1770068290951!5m2!1sde!2sde" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <!-- MARRAKESCH -->
+    <div style="background: var(--accent-teal); padding: 1.5rem; border: var(--border-width) solid black; box-shadow: 6px 6px 0px 0px black; margin-bottom: 2rem;">
+        <div class="date-badge" style="background: white; color: black; border-color: black;">24.02.2026</div>
+        <h1 style="font-size: 2rem;">Marrakesch Optionen</h1>
+        <p style="color: white; margin: 0.5rem 0 0 0; opacity: 0.9;">Hier müssen wir uns noch entscheiden:</p>
+    </div>
+
+    <div class="grid">
+        <div class="card">
+            <img src="Bilder/Bild-favorite.png" alt="Favorit" class="card-img">
+            <div class="card-content">
+                <h2>Der Favorit</h2>
+                <p>Top Lage (10 Min. Zentrum), super Bewertungen & inkl. Frühstück.</p>
+                <a href="https://www.airbnb.de/rooms/995594163001775814" target="_blank" class="btn">Ansehen</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Bilder/Bild-gated-community.png" alt="Gated" class="card-img">
+            <div class="card-content">
+                <h2>Gated Community</h2>
+                <p>Sehr schickes Interieur, aber in einer abgeschlossenen Wohnanlage.</p>
+                <a href="https://www.airbnb.de/rooms/1544335500261371473" target="_blank" class="btn">Ansehen</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Bilder/Bild-auch-Option.png" alt="Option 3" class="card-img">
+            <div class="card-content">
+                <h2>Option 3</h2>
+                <p>Schönes Haus mit großem Innenhof und Pool-Bereich.</p>
+                <a href="https://www.airbnb.de/rooms/1525239938633955791" target="_blank" class="btn">Ansehen</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Bilder/PinkesHaus.png" alt="Pink" class="card-img">
+            <div class="card-content">
+                <h2>Das pinke Haus</h2>
+                <p>Sehr eigenwilliger Look, ruhig gelegen. Street View ist etwas kurios.</p>
+                <a href="https://www.airbnb.de/rooms/1098528272899656471" target="_blank" class="btn">Airbnb</a>
+                <a href="https://www.google.com/maps/@31.5624668,-7.9575261,0a,73.7y,114.58h,93.55t/data=!3m4!1e1!3m2!1sCIHM0ogKEICAgICE0_2seg!2e10" target="_blank" class="btn" style="background: white; color: black;">Street View</a>
+                <div class="streetview-container">
+<iframe src="https://www.google.com/maps/embed?pb=!4v1770069532712!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQ0UwXzJzZWc.!2m2!1d31.5624668011591!2d-7.957526065292448!3f138.9040309404682!4f8.456784178640262!5f0.8160813932612223" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FINALE -->
+    <div class="card" style="margin-top: 3rem; background: var(--black); color: white;">
+        <div class="card-content">
+            <div class="date-badge" style="background: var(--accent-terracotta);">27.02 - 05.03.2026</div>
+            <h2>Rückreise & Ende</h2>
+            <p><strong>27.02:</strong> Zurück nach Agadir. <strong>28.02:</strong> Abflug Nemo & Stascha (05:00 Uhr). Optionale Verlängerung für euch bis zum 05.03. da es dort noch günstigere Rückflüge gibt</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
